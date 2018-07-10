@@ -1,0 +1,336 @@
+// FONT FAMILY
+
+@font-face {
+  font-family: "Modelica";
+  src:url("../fonts/BwModelica-Medium.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import "https://fonts.googleapis.com/css?family=Oswald";
+
+
+$descriptionfont: Modelica;
+$live-teal: #7cb1b7;
+$mainfont: Oswald;
+
+$large: 1750px;
+
+
+@mixin xxlarge {
+    @media (min-width: #{$large}){
+        @content;
+    }
+}
+
+
+// MIXINS
+
+@mixin secondheros($imgpath, $height: 60rem, $bgsize: cover, $bgposition: center ) {
+  background: {
+    image: url($imgpath);
+    position: $bgposition;
+    size: $bgsize;
+  }
+  height: $height;
+}
+
+
+i {
+  border: solid white;
+  border-width: 0 5px 5px 0;
+  display: inline-block;
+  padding: 15px;
+  margin-top: -1rem;
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    position: relative;
+    margin-left: 48%;
+    margin-top: 5px;
+    @include mobile {
+      margin-left: 45%;
+    }
+}
+
+
+// RECTANGLE
+
+.rectangle {
+  width: 493px;
+  height: 10px;
+  background-color: #7cb1b7;
+  @include mobile {
+    width: 250px;
+  }
+}
+
+
+// FONT SIZES
+
+.main-header {
+  font-size: 69px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #185365;
+  font-family: $mainfont;
+  letter-spacing: 6.9px;
+  @include mobile {
+    font-size: 35px;
+  }
+}
+
+.sub-header {
+  color: #3b3b3b;
+  font-size: 29px;
+  font-weight: 500;
+  font-family: $descriptionfont;
+  line-height: 40px;
+  @include mobile {
+    font-size: 16px;
+  }
+}
+
+
+
+h5 {
+  color: #8fa3b4;
+  font-size: 29px;
+  font-weight: 500;
+  line-height: 40px;
+  font-family: $descriptionfont;
+}
+
+.our-team {
+  margin-top: 30px;
+}
+
+
+p {
+  color: #3b3b3b;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: $descriptionfont;
+  line-height: 35px;
+  @include tablet-only {
+    font-size: 20px;
+  }
+  @include mobile {
+    font-size: 14px;
+  }
+}
+
+.white-paper {
+  color: #185365;
+  &:hover {
+    color: black;
+  }
+}
+
+// COLOR STYLING
+
+.is-orange {
+  h5 {
+    color: #a86509;
+    @include tablet-only {
+      font-size: 25px;
+    }
+  }
+}
+
+// ABSOLUTE CENTER
+
+@mixin absolutecenter($axis: "both"){
+  position:absolute;
+  @if $axis == "y"{
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  @if $axis == "x"{
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @if $axis == "both"{
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+  }
+}
+
+
+// Navigation
+.navbar {
+  height: 75px;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.52);
+  @include tablet-only {
+    box-shadow: none;
+  }
+  @include mobile {
+    box-shadow: none;
+  }
+  a {
+    font-family: $descriptionfont;
+    font-size: 22px;
+    letter-spacing: 2.2px;
+    padding-left: 150px;
+    color: #a86509;
+    @include tablet-only {
+      padding-left: 30px;
+    }
+    @include mobile {
+      padding-left: 30px;
+    }
+    &:first-child {
+      padding-left: 70px;
+      @include tablet-only {
+        padding-left: 30px;
+      }
+      @include mobile {
+        padding-left: 30px;
+      }
+    }
+    &:hover {
+      color: $live-teal;
+      background-color: transparent;
+    }
+  }
+}
+
+.navbar-menu {
+  @include tablet-only {
+    background-color: rgba(255, 255, 255, 0.7);
+    margin-top: 23px;
+  }
+  @include mobile {
+    background-color: rgba(255, 255, 255, 0.7);
+    margin-top: 23px;
+  }
+}
+
+
+.chamber-footer {
+  .container {
+    @include xxlarge {
+      max-width: 1670px;
+      width: 1670px;
+    }
+  }
+  margin-top: 80px;
+  height: 563px;
+  border: 1px solid #707070;
+  background-color: #185365;
+
+  @include tablet-only {
+    padding-left: 10px;
+    p {
+      font-size: 12px;
+    }
+  }
+
+  @include mobile {
+    height: auto;
+    padding-left: 5px;
+  }
+
+  h3 {
+    font-size: 29px;
+    font-family: $descriptionfont;
+    margin-bottom: 30px;
+    margin-top: 80px;
+  }
+
+  p {
+    color: white;
+  }
+
+  a {
+    color: white;
+    &:hover {
+      text-decoration: underline;
+      color: white;
+    }
+  }
+
+  .p-margin {
+    margin-bottom: 50px;
+  }
+
+  .h-margin {
+    margin-top: 10px;
+    margin-bottom: 50px;
+  }
+
+  .quick-links {
+    margin-bottom: 10px;
+  }
+
+  .button {
+    margin-top: 30px;
+    height: 55px;
+    border-radius: 17px;
+    border: 1px solid #707070;
+    background-color: #a86509;
+    color: white;
+    font-family: $descriptionfont;
+    font-size: 29px;
+    font-weight: 700;
+    letter-spacing: 5.8px;
+    padding-left: 13%;
+    padding-right: 13%;
+  }
+
+  .faq-footer {
+    margin-top: 155px;
+    @include mobile {
+      margin-top: 0;
+    }
+  }
+
+  .donate-text {
+    font-size: 18px;
+    margin-top: 25px;
+    line-height: 33px;
+    @include tablet-only {
+      font-size: 15px;
+    }
+    @include mobile {
+      padding-bottom: 40px;
+    }
+  }
+
+  h6 {
+    font-family: $descriptionfont;
+    font-weight: bold;
+  }
+}
+
+.lower-footer {
+  background-color: #7cb1b7;
+  height: 91px;
+  p {
+    font-size: 16px;
+    font-family: $descriptionfont;
+    text-align: center;
+    padding-top: 15px;
+    color: white;
+  }
+  a {
+    color: white;
+    text-decoration: underline;
+    &:hover {
+      color: #8b8a48;
+    }
+  }
+  @include mobile {
+    height: auto;
+    p {
+      font-size: 11px;
+      padding-left: 10px;
+      padding-right: 10px;
+      color: white;
+    }
+  }
+}

@@ -1,0 +1,284 @@
+.main-hero {
+  background-image: url(../img/live_mainhero.jpg);
+  background-size: cover;
+  background-position: center;
+  margin-top: -100px;
+  position: relative;
+  figure {
+    position: absolute;
+    top: 150px;
+
+    @include tablet-only {
+      top: 300px;
+    }
+    @include mobile {
+      top: 300px;
+    }
+  }
+  .down-arrow {
+    margin-top: 58%;
+    @include mobile {
+      margin-top: 100%;
+    }
+    h3 {
+      font-size: 36px;
+      font-family: $mainfont;
+      color: white;
+      letter-spacing: 4.6px;
+      text-align: center;
+    }
+  }
+}
+
+.site-wrapper {
+  overflow-x: hidden;
+}
+
+
+
+.header-section {
+  background-color: $live-teal;
+  height: 14.3rem;
+  @include mobile {
+    height: auto;
+  }
+  h1 {
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    padding: 69px 0;
+    font-family: $descriptionfont;
+    letter-spacing: 2.9px;
+    @include mobile {
+      font-size: 15px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+}
+
+.icon-section {
+  margin-top: 100px;
+  .container {
+    @include widescreen {
+      max-width: 1600px;
+      width: 1600px;
+    }
+  }
+  .is-2 {
+    width: 20%;
+    @include mobile {
+      width: 100%;
+    }
+  }
+  h3 {
+    font-size: 24px;
+    font-family: $descriptionfont;
+    text-align: center;
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+
+.live-video-hero {
+  margin-top: 100px;
+  @include secondheros('../img/live_secondhero.jpg');
+  position: relative;
+  @include mobile {
+    height: 30rem;
+  }
+  background-position: center;
+  .center-box {
+    @include absolutecenter(both);
+    width: 100%;
+    text-align: center;
+  }
+  h1 {
+    font-family: $mainfont;
+    text-shadow: 0 3px 20px rgba(0, 0, 0, 0.84);
+    font-size: 69px;
+    letter-spacing: 6.9px;
+    @include mobile {
+      font-size: 35px;
+      text-align: center;
+    }
+  }
+  .play-triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 40px 0 40px 64px;
+    border-color: transparent transparent transparent #ffffff;
+    display: block;
+    margin: 0 auto;
+    @include mobile {
+      border-width: 25px 0 25px 40px;
+    }
+    &:hover {
+      border-color: transparent transparent transparent #7cb1b7;
+      transform: scale(1.2);
+    }
+  }
+}
+
+.live-connected {
+  margin-top: 90px;
+  .is-7 {
+    padding-left: 130px;
+    p {
+      padding-top: 40px;
+      &:last-child {
+        padding-top: 0;
+      }
+    }
+    @include tablet-only {
+      width: 100%;
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+    @include mobile {
+      padding-left: 20px;
+    }
+  }
+  .is-5 {
+    position: relative;
+    right: 100px;
+    @include tablet-only {
+      width: 100%;
+      right: -10px;
+    }
+    @include mobile {
+      right: 20px;
+    }
+  }
+
+  .is-6 {
+    @include xxlarge {
+      padding-right: 30px;
+    }
+  }
+
+  .is-fluid {
+    margin: 0;
+  }
+  .secondcontainer {
+    h1 {
+      margin-bottom: 50px;
+    }
+    @include xxlarge {
+      max-width: 1670px;
+      width: 1670px;
+    }
+    @include tablet-only {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    @include mobile {
+      padding-left: 5px;
+      padding-right: 20px;
+    }
+  }
+  p {
+    margin-top: 25px;
+  }
+  .lower-units {
+    h5 {
+      margin-top: 35px;
+    }
+  }
+  .is-visitors {
+    padding-left: 5%;
+    @include mobile {
+      padding-left: 14px;
+    }
+  }
+}
+
+
+.work-play-hero {
+  @extend .live-video-hero;
+  @include secondheros('../img/live_thirdhero.jpg');
+  @include mobile {
+    height: 30rem;
+  }
+  h1 {
+    @include absolutecenter(both);
+    text-align: center;
+    width: 65%;
+    @include tablet-only {
+      width: 100%;
+    }
+    @include mobile {
+     width: 100%;
+    }
+  }
+}
+
+
+.infustructure-section {
+  height: 14.3rem;
+  background-color: #8fa3b4;
+  @include mobile {
+    height: auto;
+  }
+  h1 {
+    text-align: center;
+    padding: 55px 0;
+      color: white;
+      font-size: 24px;
+      padding: 55px 0;
+      font-family: $descriptionfont;
+      letter-spacing: 2.9px;
+      @include mobile {
+        font-size: 16px;
+      }
+  }
+}
+
+.live-video-hero2 {
+  @extend .live-video-hero;
+  margin-top: 30px;
+  @include secondheros('../img/live-fourthhero.jpg');
+  @include mobile {
+    height: 30rem;
+  }
+}
+
+.play-hero {
+  margin-top: 100px;
+  @include secondheros('../img/live-fifthhero.jpg');
+  @include mobile {
+    height: 30rem;
+  }
+}
+
+.innovate-hero {
+  margin-top: 100px;
+  @include secondheros('../img/live-sixthhero.jpg');
+  @include mobile {
+    height: 30rem;
+  }
+}
+
+.important-hero {
+  margin-top: 100px;
+  @include secondheros('../img/live-seventhhero.jpg');
+  @include tablet-only {
+    background-position: left;
+  }
+  @include mobile {
+    height: 30rem;
+  }
+}
+
+.taskforce-hero {
+  @extend .live-video-hero;
+  margin-top: 100px;
+  @include secondheros('../img/live-eigthhero.jpg');
+  @include mobile {
+    height: 30rem;
+  }
+}
